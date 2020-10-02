@@ -29,7 +29,7 @@ jobs:
       run: dotnet build --configuration Release
       
     - name: Publish
-      run: dotnet publish --configuration Release #²-o "publish/"
+      run: dotnet publish --configuration Release -o "publish/"
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.0
@@ -37,4 +37,4 @@ jobs:
         # Artifact name
         name: Publish DotNet
         # Path To Upload
-        path: bin/Release/
+        path: publish/
