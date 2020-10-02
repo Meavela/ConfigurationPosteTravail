@@ -43,7 +43,7 @@ namespace webapp
             app.UseDeveloperExceptionPage();
             if (env.IsDevelopment())
             {
-             //   app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
             }
             else
             {
