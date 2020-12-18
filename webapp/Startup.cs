@@ -29,8 +29,7 @@ namespace webapp
             services.AddControllersWithViews();
 
             services.AddDbContext<webappContext>(opt => 
-                opt.UseSqlServer(ConfigurationExtensions.
-                GetConnectionString(this.Configuration, "myDb")));
+                opt.UseSqlServer(Configuration.GetConnectionString("myDb")));
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
